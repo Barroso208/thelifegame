@@ -2,11 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LIFE</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Game of life</title>
 </head>
-<body onload='inicia();'>
-    <script src='juego.js'></script>
-    <canvas id='canvas' style='border:1px solid #000000;'></canvas>
+<body onload="inicio()">
+    <div class="izquierda colums">
+        <div id="column" class="columna">
+            <div class="fila1 fila"><div class="boton boton1" id="boton1">REJILLA</div></div>
+            <div class="fila2 fila"><div class="boton boton2" id="boton2">Unidad</div></div>
+            <div class="fila3 fila"><div class="boton boton3" id="boton3">Stop</div></div>
+            <div class="fila4 fila"></div>
+            <div class="fila5 fila"></div>
+            <div class="fila6 fila"></div>
+            <div class="fila7 fila"></div>
+            <div class="fila8 fila"></div>
+        </div>
+    </div>
+    <div class="centro colums">
+        <div class="parametros">
+        <div class="velocidad" id="velocidad">
+                <h3 class="title-velocidad">Velocidad</h3>
+                <div id='1' name='1' class="velocidades">x1</div>
+                <div id='2' name='2' class="velocidades">x2</div>
+                <div id='3' name='3' class="velocidades">x3</div>
+            </div>
+            <!-- <div>Tiempo</div>
+            <input class="inputTiempo" type="text">
+            <button class="añadir submit" type="submit">Añadir</button> -->
+        </div>
+            <div id="generacion"></div>
+        <div width="500" height="500" id="tablero">
+        </div>
+    </div>
+    <script src="realCode.js"></script>
 </body>
 </html>
