@@ -152,8 +152,8 @@ function mOv(){
                 for(let e = -1;e< 2;e++){
                     let x = k + i;
                     let y = j + e;
-                    if(x<0){x=x+f}else if(x>f-1){x=x-f};
-                    if(y<0){y=y+c}else if(y>c-1){y=y-c};
+                    x = ( x + f) % f;
+                    y = ( y + f) % f;
                         if(celdas[x][y] !== celdas[k][j]){
                             celdas[k][j].vecinos = celdas[k][j].vecinos + celdas[x][y].estado;
                         }
