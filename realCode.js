@@ -164,19 +164,14 @@ function mOv(){
     /* Definir el estado de la célula para la siguiente ronda */
     for(let k = 0;k < f;k++){
         for(let j = 0;j<c;j++){
-            if(celdas[k][j].estado == 0){
-                if(celdas[k][j].vecinos == 3){
+            if((celdas[k][j].estado == 0)&&(celdas[k][j].vecinos == 2)){
+                celdas[k][j].estado = 0;
+            }else if((celdas[k][j].vecinos == 2)||(celdas[k][j].vecinos == 3)){
                     celdas[k][j].estado = 1;
                 }else{
                     celdas[k][j].estado = 0;
                 }
-            }else{
-                if((celdas[k][j].vecinos == 2)||(celdas[k][j].vecinos == 3)){
-                    celdas[k][j].estado = 1;
-                }else{
-                    celdas[k][j].estado = 0;
-                }
-            }
+            
             celdas[k][j].vecinos = 0;
         }
     }
