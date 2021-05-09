@@ -2,14 +2,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
 }
+
 body{
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(187, 187, 187);
+    background-color: rgb(43, 43, 43);
+    overflow-x: hidden;
 }
 .izquierda{
     width: 20vw;
@@ -28,16 +32,20 @@ body{
 .columna{
     width: 20vw;
     height: 100vh;
-    background-color: rgb(20, 19, 19);
+    background-color: rgb(48, 48, 48);
 }
 .fila{
     height: 75px;
-    background-color: #fff;
+    background-color: rgb(68, 68, 68);
     width: inherit;
     border-top: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+.fila4{
+    color:#fff;
+    font: 30px 'oswald';
 }
 .boton{
     width: auto;
@@ -47,7 +55,10 @@ body{
     font: 20px 'Raleway';
     cursor: pointer;
     color:rgb(255, 255, 255);
-    background-color: rgb(49, 49, 49);
+    background-color: rgb(0, 109, 18);
+}
+.boton3{
+    background-color:rgb(255, 0, 0);
 }
 #tablero{
     width: 501px;
@@ -81,13 +92,18 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    color: #fff;
 }
 .title-velocidad{
     background-color: transparent !important;
 }
 .velocidades{
+    border-radius: 10px;
     padding: 3px;
     cursor: pointer;
+}
+.velocidad1{
+    background-color: forestgreen;
 }
 
 @media (max-width:815px){
